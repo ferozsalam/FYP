@@ -1,0 +1,1 @@
+/* Helper methods to statically generate C++ params which can be transferred	in the .apk and inflated to a Params object */	#include "proxylib_api.h"int main() {	char* seedbuf = new char[256];	int bufsize = sizeof(seedbuf);	void *params;		proxylib_initLibrary(seedbuf, bufsize);	proxylib_generateParams(&params, SCHEME_PRE1);	return 0;	}
