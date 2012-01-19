@@ -1,6 +1,6 @@
 MIRACLPATH = ../../miracl
 CC = g++
-CCFLAGS = -I${MIRACLPATH} -O2  
+CCFLAGS = -fPIC -I${MIRACLPATH} -O2 
 CCLIBS = -lstdc++
 AR = ar
 ARARGS = rcs

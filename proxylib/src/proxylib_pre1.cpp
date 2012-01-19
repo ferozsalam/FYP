@@ -555,7 +555,8 @@ ProxyPK_PRE1::getSerializedSize(SERIALIZE_MODE mode)
 {
   switch (mode) {
   case SERIALIZE_BINARY:
-    return (PBITS/8 + 10) * 4;
+    //return (PBITS/8 + 10) * 4;
+    return 2*136;
     break;
   case SERIALIZE_HEXASCII:
     break;
@@ -785,7 +786,8 @@ ProxyCiphertext_PRE1::getSerializedSize(SERIALIZE_MODE mode)
 {
   switch (mode) {
   case SERIALIZE_BINARY:
-    return (PBITS/8 + 10) * 3;
+    //return (PBITS/8 + 10) * 3;
+    return (1+8+136*2);
     break;
   case SERIALIZE_HEXASCII:
     break;

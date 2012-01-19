@@ -994,20 +994,20 @@ CurveParams::deserialize(SERIALIZE_MODE mode, char *buffer, int bufSize)
     //ZZn2 Z;
     //ZZn2 Zprecomp;
     //ZZn2 cube;
-    
+  
     int len;
     this->bits_local = toint(charToBig(buffer, &len));
     if (len <= 0) return FALSE;
     buffer += len;
-
+  
     this->p = charToBig(buffer, &len);
     if (len <= 0) return FALSE;
     buffer += len;
-
+  
     this->q = charToBig(buffer, &len);
     if (len <= 0) return FALSE;
     buffer += len;
-
+  
     this->qsquared = pow(q, 2);
 
     this->P = charToECn(buffer, &len);

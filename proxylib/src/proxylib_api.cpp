@@ -186,7 +186,6 @@ int proxylib_serializeParams(void *params, char *buffer, int *bufferSize,
 	return error;
 }
 
-// proxylib_deserializeParams()
 //
 // Deserializes a buffer of parameters and returns a newly-allocated buffer.
 
